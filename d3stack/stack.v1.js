@@ -21,7 +21,8 @@ function stack() {
   var body = d3.select("body")
       .style("margin", 0)
       .style("padding", 0)
-      .style("background", "#000");
+      // .style("background", "#000")
+      .style("background", "#333");
 
   if (touchy) {
     section
