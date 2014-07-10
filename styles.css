@@ -66,12 +66,11 @@ section{
 .run_captionRight{
 	position:absolute;
 	top: 0; 
-	left: 0; 
+	right: 0; 
 	width: 40%;
-	margin-left:55%;
 	font-family: Arial, sans-serif;
 	color:white;
-	padding:1%;
+	padding:2em;
 }
 
 .run_day{

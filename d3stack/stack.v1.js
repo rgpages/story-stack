@@ -10,7 +10,8 @@ function stack() {
       i = NaN,
       y = 0,
       yt,
-      scrollRatio = 1 / 6;
+      // scrollRatio = 1 / 6;
+      scrollRatio = 1 / 2;
 
   var section = d3.selectAll("section")
       .style("box-sizing", "border-box")
@@ -21,8 +22,8 @@ function stack() {
   var body = d3.select("body")
       .style("margin", 0)
       .style("padding", 0)
-      // .style("background", "#000")
-      .style("background", "#333");
+      .style("background", "#000")
+      //.style("background", "#333");
 
   if (touchy) {
     section
