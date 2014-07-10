@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<title>Ashton Eaton - The Register-Guard | Eugene, Ore.</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<link rel="stylesheet" href="zepplin/zep_styles.css">
+	<link rel="stylesheet" href="styles.css">
+	
+	<style>
+	
+	</style>
+	
+	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+	<script>
+		
+		window.onload = function() {
+			var zeppelin = new Headroom(document.querySelector("header"), {
+				"tolerance": 10,
+				"offset": 205,
+				"classes": {
+					"initial": "z_animated",
+					"pinned": "z_slide-down",
+					"unpinned": "z_slide-up",
+					"top": "z_top",
+					"notTop": "z_top"
+				}
+			});
+			zeppelin.init();
+		};
+		
+	</script>
+	
+</head>
+<body>
+	<!--	>>>>	HEAD	<<<<	-->
+<!-- 	<header id="zeppelin" role="banner">
+		<h1 style="width:304px;float:left;"><a href="http://registerguard.com">The Register-Guard</a></h1>
+		<p style="margin:0 310px;width:304px;float:left;">Ashton Eaton</p>
+	</header> -->
+	<!--	>>>>	/HEAD	<<<<	-->
+	
+	<section id="headline">
+		<h1 style="opacity:1">9,039</h1>
+		<div class="subhead">
+			<p>An event-by-event look at how <br><span style="font-size:1.3em;font-weight:400;line-height:1.2em;">Ashton Eaton</span> <br>broke the <span style="text-decoration:underline">11-year-old world decathlon record</span> on his home track at the 2012 U.S. Olympic Track and Field Trials in Eugene, Ore.</p>
+		</div>
+	</section>
+	
+	<section style="background:url(media/ashton_1.jpg) no-repeat;background-size:100%;">
+		<p></p>
+	</section>
+	
+	<script src="d3stack/d3.v3.min.js"></script>
+	<script src="d3stack/stack.v1.js"></script>
+	
+	<script>
+		var mystack = stack()
+		.on("activate", activate)
+		.on("deactivate", deactivate);
+	</script>
+	
+</body>
+</html>
