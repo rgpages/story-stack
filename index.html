@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html class="no-js" lang="en" dir="ltr">
 <head>
 	
 	<meta charset="utf-8">
@@ -9,10 +9,13 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	
+	<script>/*! https://gist.github.com/mhulse/4704893 */;(function(a){a.className=a.className.replace(/\bno-js\b/,'js')}(document.documentElement));</script>
+	
 	<link rel="stylesheet" href="zepplin/zep_styles.css">
 	<link rel="stylesheet" href="styles.css">
 	
 	<style>
+		
 		.progress-indicator-2 {
 			position:fixed;
 			top:0;
@@ -22,7 +25,7 @@
 			z-index: 9999;
 		}
 		
-		body{
+		.no-js body{
 			display: none;
 		}
 		
@@ -354,7 +357,7 @@
 		
 		
 		$(document).ready(function(){
-			$("body").style("display","block");
+			$(".js").show();
 		});
 	
 	
