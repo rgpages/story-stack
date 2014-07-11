@@ -21,6 +21,11 @@
 			background-color: white;
 			z-index: 9999;
 		}
+		
+		body{
+			background-color: black;
+			display: none;
+		}
 	</style>
 	
 	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
@@ -324,6 +329,13 @@
 		}
 
 	}());
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			var bod = d3.select("body")
+				.style("display","block");
+		});
 	</script>
 	
 </body>
