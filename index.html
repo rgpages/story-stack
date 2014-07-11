@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	
 	<title>Ashton Eaton - The Register-Guard | Eugene, Ore.</title>
+	
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	
@@ -42,23 +43,22 @@
 	</style>
 	
 	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-	<script>
-		
+	
+	<script>	
 		window.onload = function() {
-			var zeppelin = new Headroom(document.querySelector("header"), {
-				"tolerance": 10,
-				"offset": 205,
-				"classes": {
-					"initial": "z_animated",
-					"pinned": "z_slide-down",
-					"unpinned": "z_slide-up",
-					"top": "z_top",
-					"notTop": "z_top"
+			var zeppelin = new Headroom(document.querySelector('header'), {
+				'tolerance': 10,
+				'offset': 205,
+				'classes': {
+					'initial': 'z_animated',
+					'pinned': 'z_slide-down',
+					'unpinned': 'z_slide-up',
+					'top': 'z_top',
+					'notTop': 'z_top'
 				}
 			});
 			zeppelin.init();
 		};
-		
 	</script>
 	
 </head>
@@ -297,11 +297,6 @@
 	
 	<script src="d3stack/d3.v3.min.js"></script>
 	<script src="d3stack/stack.v1.js"></script>
-	
-	<script>
-
-	</script>
-	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	
 	<script>
@@ -309,8 +304,8 @@
 		// stack
 		
 		var mystack = stack()
-			.on("activate", activate)
-			.on("deactivate", deactivate);
+			.on('activate', activate)
+			.on('deactivate', deactivate);
 			
 			
 		// progress bar
@@ -343,9 +338,9 @@
 			function updateProgress(perc){
 				var circle_offset = 126 * perc;
 				$circ.css({
-					"stroke-dashoffset" : 126 - circle_offset
+					'stroke-dashoffset' : 126 - circle_offset
 				});
-				$progCount.html(Math.round(perc * 100) + "%");
+				$progCount.html(Math.round(perc * 100) + '%');
 
 				$prog2.css({width : perc*100 + '%'});
 			}
@@ -357,7 +352,7 @@
 		
 		
 		$(document).ready(function(){
-			$(".js").show();
+			$('.js').show();
 		});
 	
 	
