@@ -296,56 +296,68 @@
 	<script src="d3stack/stack.v1.js"></script>
 	
 	<script>
-		var mystack = stack()
-		.on("activate", activate)
-		.on("deactivate", deactivate);
+
 	</script>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	
 	<script>
-	(function(){
-		var $w = $(window);
-		var $circ = $('.animated-circle');
-		var $progCount = $('.progress-count');
-		var $prog2 = $('.progress-indicator-2');
-
-		var wh, h, sHeight;
-
-		function setSizes(){
-			wh = $w.height();
-			h = $('body').height();
-			sHeight = h - wh;
-		}
-
-		setSizes();
-
-		$w.on('scroll', function(){
-			var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
-			updateProgress(perc);
-		}).on('resize', function(){
-			setSizes();
-			$w.trigger('scroll');
-		});
-
-		function updateProgress(perc){
-			var circle_offset = 126 * perc;
-			$circ.css({
-				"stroke-dashoffset" : 126 - circle_offset
-			});
-			$progCount.html(Math.round(perc * 100) + "%");
-
-			$prog2.css({width : perc*100 + '%'});
-		}
-
-	}());
-	</script>
 	
-	<script>
-		$(document).ready(function(){
-		var bod = d3.select("body")
-			.style("display","block");
+		// stack
+		
+		var mystack = stack()
+			.on("activate", activate)
+			.on("deactivate", deactivate);
+			
+			
+		// progress bar
+			
+			
+		(function(){
+			var $w = $(window);
+			var $circ = $('.animated-circle');
+			var $progCount = $('.progress-count');
+			var $prog2 = $('.progress-indicator-2');
+
+			var wh, h, sHeight;
+
+			function setSizes(){
+				wh = $w.height();
+				h = $('body').height();
+				sHeight = h - wh;
+			}
+
+			setSizes();
+
+			$w.on('scroll', function(){
+				var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
+				updateProgress(perc);
+			}).on('resize', function(){
+				setSizes();
+				$w.trigger('scroll');
+			});
+
+			function updateProgress(perc){
+				var circle_offset = 126 * perc;
+				$circ.css({
+					"stroke-dashoffset" : 126 - circle_offset
+				});
+				$progCount.html(Math.round(perc * 100) + "%");
+
+				$prog2.css({width : perc*100 + '%'});
+			}
+
+		}());
+		
+		
+		// load
+		
+		
+		$(document).load(function(){
+			d3.select("body").style("display","block");
 		});
+	
+	
 	</script>
 	
 </body>
