@@ -28,6 +28,8 @@ function stack() {
   if (touchy) {
     section
         .style("position", "relative");
+    d3.select(".run_full").style("display", "none");
+    d3.select("run_splash").style("width", "40%");
 
     d3.select(window)
         .on("resize.stack", resize)
