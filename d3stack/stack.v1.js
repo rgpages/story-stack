@@ -29,7 +29,7 @@ function stack() {
     section
         .style("position", "relative");
     d3.selectAll(".run_full").style("display", "none");
-    d3.selectAll("run_splash").attr("width", "50%");
+    d3.selectAll("run_splash").attr("width", "50%!important");
 
     d3.select(window)
         .on("resize.stack", resize)
